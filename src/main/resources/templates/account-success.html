@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Created</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            flex-direction: column;
+        }
+        .container {
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .account-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .account-details p {
+            width: 45%;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Account Successfully Created!</h2>
+
+        <div class="account-details">
+            <p><strong>Account Number:</strong> <span th:text="${account.accountNumber}"></span></p>
+            <p><strong>Customer ID:</strong> <span th:text="${account.customerId}"></span></p>
+            <p><strong>Customer Name:</strong> <span th:text="${account.customerName}"></span></p>
+            <p><strong>Account Type:</strong> <span th:text="${account.accountType}"></span></p>
+            <p><strong>Balance:</strong> ₹<span th:text="${account.balance}"></span></p>
+        </div>
+
+         <a href="/withdraw.html">
+      <button>Withdraw Amount</button>
+      </a>
+      <a href="/deposite.html">
+        <button type="submit">Deposit</button></a>
+
+            <a href="/">Go to Home</a>
+            
+       
+    </div>
+
+</body>
+</html>
+

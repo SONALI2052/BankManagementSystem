@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Account Summary</h2>
+        <p>Current Balance: ₹<span id="balance">0.00</span></p>
+        <a href="withdraw.html"><button>Withdraw Amount</button></a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve the balance from localStorage, default to 0 if not set
+            const balance = parseFloat(localStorage.getItem('balance')) || 0;
+            
+            // Update the balance displayed in the span element
+            document.getElementById('balance').innerText = balance.toFixed(2);
+        });
+    </script>
+</body>
+</html>
+

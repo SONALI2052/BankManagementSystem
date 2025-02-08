@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .details p {
+            font-size: 16px;
+            margin: 8px 0;
+            width: 48%; /* Adjust width to fit two items per row */
+        }
+        .details p span {
+            font-weight: bold;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a,
+        .button-container button {
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .button-container a:hover,
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful!</h1>
+        <p>Thank you, <strong>Sonali Raut</strong>, for registering with us.</p>
+        <div class="details">
+            <p><span>Your Email:</span> rautsonali985@gmail.com</p>
+            <p><span>Your State:</span> Maharashtra</p>
+            <p><span>Your City:</span> Kothrud</p>
+            <p><span>Your Branch:</span> IEET</p>
+            <p><span>Your Phone Number:</span> 1234567890</p>
+            <p><span>Your Address:</span> Pune</p>
+   
+            
+        </div>
+ 
+        <div class="button-container">
+            <form action="/create-account" method="GET" style="display: inline;">
+                <button type="submit">Create Account</button>
+            </form>
+            <a href="/">Go to Home</a>
+        </div>
+    </div>
+</body>
+</html> 

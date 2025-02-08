@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+    
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh; /* Set to full height */
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .registration-form {
+            width: 400px; /* Fixed width */
+            padding: 15px; /* Reduced padding */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 6px; /* Reduced padding */
+            margin: 6px 0; /* Reduced margin */
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            font-size: 20px; 
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="registration-form">
+        <h1>Customer Registration</h1>
+        
+        <form action="/register" method="POST">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" list="state-options" required onchange="updateCities()"><br>
+            <datalist id="state-options">
+                <option value="Maharashtra">
+                <option value="Gujarat">
+                <option value="Karnataka">
+                <option value="Tamil Nadu">
+                <option value="Uttar Pradesh">
+                <option value="Rajasthan">
+                <option value="Madhya Pradesh">
+                <option value="West Bengal">
+                <option value="Bihar">
+                <option value="Kerala">
+            </datalist>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" list="city-options" required><br>
+            <datalist id="city-options">
+                <option value="pune">
+                <option value="chinchwad">
+                <option value="kothrud">
+                <option value="karvenagar">
+                <option value="pakhrud">
+                <option value="bhoom">
+                <option value="Akurdi">
+                <option value="Ravet">
+            </datalist>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" required><br>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
